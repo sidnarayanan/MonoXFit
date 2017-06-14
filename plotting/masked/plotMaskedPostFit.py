@@ -9,8 +9,6 @@ setTDRStyle()
 #plotextralabel = 'Masked'
 plotextralabel = ''
 
-PRELIM = True
-
 new_dic = defaultdict(dict)
 
 def getInt(h):
@@ -323,8 +321,7 @@ def plotPreFitPostFit(region,cat='category_monotop',combinecat='',blind=False):
   latex2.SetTextSize(0.5*c.GetTopMargin())
   latex2.SetTextFont(52)
   latex2.SetTextAlign(11)
-  if PRELIM:
-    latex2.DrawLatex(0.21, 0.94, "Preliminary")          
+#  latex2.DrawLatex(0.21, 0.94, "Preliminary")          
 
   gPad.RedrawAxis()
 
@@ -482,11 +479,8 @@ def plotPreFitPostFit(region,cat='category_monotop',combinecat='',blind=False):
   label = region+'_'
   label += cat.replace('category_','')
 
-  plotextralabel_ = plotextralabel
-  if PRELIM:
-    plotextralabel_ += '_prelim'
   for ext in ['pdf','png','C']:
-    c.SaveAs(plotDir+"stackedPostfit%s_"%plotextralabel_+label+"."+ext)
+    c.SaveAs(plotDir+"stackedMasked%s_"%plotextralabel+label+"."+ext)
 
   #c.SaveAs("test.pdf")
 

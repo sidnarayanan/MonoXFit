@@ -1,0 +1,1453 @@
+--expectSignal 0
+Warning: Bin tight_zee has no signal processes contributing to it
+Warning: Bin tight_zmm has no signal processes contributing to it
+Warning: Bin tight_pho has no signal processes contributing to it
+Warning: Bin tight_ten has no signal processes contributing to it
+Warning: Bin tight_wen has no signal processes contributing to it
+Warning: Bin tight_tmn has no signal processes contributing to it
+Warning: Bin tight_wmn has no signal processes contributing to it
+Warning: Bin loose_zee has no signal processes contributing to it
+Warning: Bin loose_zmm has no signal processes contributing to it
+Warning: Bin loose_pho has no signal processes contributing to it
+Warning: Bin loose_ten has no signal processes contributing to it
+Warning: Bin loose_wen has no signal processes contributing to it
+Warning: Bin loose_tmn has no signal processes contributing to it
+Warning: Bin loose_wmn has no signal processes contributing to it
+[?1034h[?1034hHave POIs: ['r']
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+>> combine -M MultiDimFit -n _initialFit_Test --algo singles --redefineSignalPOIs r --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+[?1034hHave POIs: ['r']
+Have nuisance parameters: 176
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+>>> including systematics
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+>>> including systematics
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+>>> random number generator seed is 123456
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+>>> including systematics
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+>>> random number generator seed is 123456
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Redefining the POIs to be: RooArgSet:: = (r)
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+Redefining the POIs to be: RooArgSet:: = (r)
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Redefining the POIs to be: RooArgSet:: = (r)
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+Redefining the POIs to be: RooArgSet:: = (r)
+Redefining the POIs to be: RooArgSet:: = (r)
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Redefining the POIs to be: RooArgSet:: = (r)
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+Computing limit starting from observation
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Redefining the POIs to be: RooArgSet:: = (r)
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+Redefining the POIs to be: RooArgSet:: = (r)
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+Redefining the POIs to be: RooArgSet:: = (r)
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+>>> including systematics
+>>> method used to compute upper limit is MultiDimFit
+>>> random number generator seed is 123456
+Redefining the POIs to be: RooArgSet:: = (r)
+Computing limit starting from observation
+Constraints of type RooGaussian: 149
+Constraints of type SimpleGaussianConstraint: 27
+>> combine -M MultiDimFit -n _paramFit_Test_monotop_stat_error_photonModelCR_bin1 --algo impact --redefineSignalPOIs r -P monotop_stat_error_photonModelCR_bin1 --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_monotop_stat_error_photonModelCR_bin2 --algo impact --redefineSignalPOIs r -P monotop_stat_error_photonModelCR_bin2 --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_monotop_stat_error_photonModelCR_bin3 --algo impact --redefineSignalPOIs r -P monotop_stat_error_photonModelCR_bin3 --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_monotop_stat_error_singlemuontopModelCR_bin0 --algo impact --redefineSignalPOIs r -P monotop_stat_error_singlemuontopModelCR_bin0 --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_monotop_stat_error_singlemuontopModelCR_bin1 --algo impact --redefineSignalPOIs r -P monotop_stat_error_singlemuontopModelCR_bin1 --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_monotop_stat_error_singlemuontopModelCR_bin2 --algo impact --redefineSignalPOIs r -P monotop_stat_error_singlemuontopModelCR_bin2 --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_norm_stop --algo impact --redefineSignalPOIs r -P norm_stop --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_norm_tt --algo impact --redefineSignalPOIs r -P norm_tt --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_norm_vv --algo impact --redefineSignalPOIs r -P norm_vv --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_monotop_loose_stat_error_dielectronModelCR_bin1 --algo impact --redefineSignalPOIs r -P monotop_loose_stat_error_dielectronModelCR_bin1 --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_monotop_loose_stat_error_dielectronModelCR_bin2 --algo impact --redefineSignalPOIs r -P monotop_loose_stat_error_dielectronModelCR_bin2 --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_monotop_loose_stat_error_dielectronModelCR_bin3 --algo impact --redefineSignalPOIs r -P monotop_loose_stat_error_dielectronModelCR_bin3 --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_monotop_stat_error_singlemuontopModelCR_bin6 --algo impact --redefineSignalPOIs r -P monotop_stat_error_singlemuontopModelCR_bin6 --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_monotop_stat_error_singleelectrontopModelCR_bin0 --algo impact --redefineSignalPOIs r -P monotop_stat_error_singleelectrontopModelCR_bin0 --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_monotop_stat_error_singleelectrontopModelCR_bin1 --algo impact --redefineSignalPOIs r -P monotop_stat_error_singleelectrontopModelCR_bin1 --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_track_mu --algo impact --redefineSignalPOIs r -P track_mu --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_trig_ele --algo impact --redefineSignalPOIs r -P trig_ele --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_trig_pho --algo impact --redefineSignalPOIs r -P trig_pho --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_monotop_loose_stat_error_dielectronModelCR_bin4 --algo impact --redefineSignalPOIs r -P monotop_loose_stat_error_dielectronModelCR_bin4 --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_monotop_loose_stat_error_dielectronModelCR_bin5 --algo impact --redefineSignalPOIs r -P monotop_loose_stat_error_dielectronModelCR_bin5 --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_monotop_loose_stat_error_dielectronModelCR_bin6 --algo impact --redefineSignalPOIs r -P monotop_loose_stat_error_dielectronModelCR_bin6 --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_monotop_stat_error_singleelectrontopModelCR_bin5 --algo impact --redefineSignalPOIs r -P monotop_stat_error_singleelectrontopModelCR_bin5 --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_monotop_stat_error_singleelectrontopModelCR_bin6 --algo impact --redefineSignalPOIs r -P monotop_stat_error_singleelectrontopModelCR_bin6 --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_monotop_stat_error_singlemuonwtopModelCR_bin0 --algo impact --redefineSignalPOIs r -P monotop_stat_error_singlemuonwtopModelCR_bin0 --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_monotop_stat_error_dielectronModelCR_bin5 --algo impact --redefineSignalPOIs r -P monotop_stat_error_dielectronModelCR_bin5 --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_monotop_stat_error_dielectronModelCR_bin6 --algo impact --redefineSignalPOIs r -P monotop_stat_error_dielectronModelCR_bin6 --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_monotop_stat_error_dielectronModelCR_bin7 --algo impact --redefineSignalPOIs r -P monotop_stat_error_dielectronModelCR_bin7 --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_monotop_loose_stat_error_dimuonModelCR_bin2 --algo impact --redefineSignalPOIs r -P monotop_loose_stat_error_dimuonModelCR_bin2 --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_monotop_loose_stat_error_dimuonModelCR_bin3 --algo impact --redefineSignalPOIs r -P monotop_loose_stat_error_dimuonModelCR_bin3 --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_monotop_loose_stat_error_dimuonModelCR_bin4 --algo impact --redefineSignalPOIs r -P monotop_loose_stat_error_dimuonModelCR_bin4 --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_monotop_loose_stat_error_singleelectronwModel_bin2 --algo impact --redefineSignalPOIs r -P monotop_loose_stat_error_singleelectronwModel_bin2 --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_monotop_loose_stat_error_singleelectronwModel_bin3 --algo impact --redefineSignalPOIs r -P monotop_loose_stat_error_singleelectronwModel_bin3 --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_monotop_loose_stat_error_singleelectronwModel_bin4 --algo impact --redefineSignalPOIs r -P monotop_loose_stat_error_singleelectronwModel_bin4 --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_monotop_stat_error_photonModelCR_bin7 --algo impact --redefineSignalPOIs r -P monotop_stat_error_photonModelCR_bin7 --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_monotop_stat_error_dimuonModelCR_bin1 --algo impact --redefineSignalPOIs r -P monotop_stat_error_dimuonModelCR_bin1 --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_monotop_stat_error_dimuonModelCR_bin2 --algo impact --redefineSignalPOIs r -P monotop_stat_error_dimuonModelCR_bin2 --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_monotop_loose_stat_error_photonModelCR_bin6 --algo impact --redefineSignalPOIs r -P monotop_loose_stat_error_photonModelCR_bin6 --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_monotop_loose_stat_error_photonModelCR_bin7 --algo impact --redefineSignalPOIs r -P monotop_loose_stat_error_photonModelCR_bin7 --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_monotop_loose_stat_error_dimuonModelCR_bin1 --algo impact --redefineSignalPOIs r -P monotop_loose_stat_error_dimuonModelCR_bin1 --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_monotop_stat_error_singlemuonwtopModelCR_bin1 --algo impact --redefineSignalPOIs r -P monotop_stat_error_singlemuonwtopModelCR_bin1 --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_monotop_stat_error_singlemuonwtopModelCR_bin2 --algo impact --redefineSignalPOIs r -P monotop_stat_error_singlemuonwtopModelCR_bin2 --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_monotop_stat_error_singlemuonwtopModelCR_bin3 --algo impact --redefineSignalPOIs r -P monotop_stat_error_singlemuonwtopModelCR_bin3 --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_sjbtag --algo impact --redefineSignalPOIs r -P sjbtag --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_sjmistag --algo impact --redefineSignalPOIs r -P sjmistag --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_btag --algo impact --redefineSignalPOIs r -P btag --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_monotop_stat_error_singlemuonwModel_bin5 --algo impact --redefineSignalPOIs r -P monotop_stat_error_singlemuonwModel_bin5 --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_monotop_stat_error_singlemuonwModel_bin6 --algo impact --redefineSignalPOIs r -P monotop_stat_error_singlemuonwModel_bin6 --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_monotop_stat_error_singlemuonwModel_bin7 --algo impact --redefineSignalPOIs r -P monotop_stat_error_singlemuonwModel_bin7 --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_monotop_stat_error_singlemuonwtopModelCR_bin4 --algo impact --redefineSignalPOIs r -P monotop_stat_error_singlemuonwtopModelCR_bin4 --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_monotop_stat_error_singlemuonwtopModelCR_bin5 --algo impact --redefineSignalPOIs r -P monotop_stat_error_singlemuonwtopModelCR_bin5 --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_monotop_stat_error_singlemuonwtopModelCR_bin6 --algo impact --redefineSignalPOIs r -P monotop_stat_error_singlemuonwtopModelCR_bin6 --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_monotop_stat_error_dimuonModelCR_bin3 --algo impact --redefineSignalPOIs r -P monotop_stat_error_dimuonModelCR_bin3 --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_monotop_stat_error_dimuonModelCR_bin4 --algo impact --redefineSignalPOIs r -P monotop_stat_error_dimuonModelCR_bin4 --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_monotop_stat_error_dimuonModelCR_bin5 --algo impact --redefineSignalPOIs r -P monotop_stat_error_dimuonModelCR_bin5 --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_monotop_loose_stat_error_photonModelCR_bin3 --algo impact --redefineSignalPOIs r -P monotop_loose_stat_error_photonModelCR_bin3 --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_monotop_loose_stat_error_photonModelCR_bin4 --algo impact --redefineSignalPOIs r -P monotop_loose_stat_error_photonModelCR_bin4 --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_monotop_loose_stat_error_photonModelCR_bin5 --algo impact --redefineSignalPOIs r -P monotop_loose_stat_error_photonModelCR_bin5 --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_monotop_stat_error_singleelectronwtopModelCR_bin0 --algo impact --redefineSignalPOIs r -P monotop_stat_error_singleelectronwtopModelCR_bin0 --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_monotop_stat_error_singleelectronwtopModelCR_bin1 --algo impact --redefineSignalPOIs r -P monotop_stat_error_singleelectronwtopModelCR_bin1 --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_monotop_stat_error_singleelectronwtopModelCR_bin2 --algo impact --redefineSignalPOIs r -P monotop_stat_error_singleelectronwtopModelCR_bin2 --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_monotop_stat_error_wzModelCR_bin1 --algo impact --redefineSignalPOIs r -P monotop_stat_error_wzModelCR_bin1 --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_monotop_stat_error_wzModelCR_bin2 --algo impact --redefineSignalPOIs r -P monotop_stat_error_wzModelCR_bin2 --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_monotop_stat_error_wzModelCR_bin3 --algo impact --redefineSignalPOIs r -P monotop_stat_error_wzModelCR_bin3 --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_monotop_loose_stat_error_dielectronModelCR_bin7 --algo impact --redefineSignalPOIs r -P monotop_loose_stat_error_dielectronModelCR_bin7 --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_monotop_loose_stat_error_wzModelCR_bin1 --algo impact --redefineSignalPOIs r -P monotop_loose_stat_error_wzModelCR_bin1 --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_monotop_loose_stat_error_wzModelCR_bin2 --algo impact --redefineSignalPOIs r -P monotop_loose_stat_error_wzModelCR_bin2 --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_monotop_stat_error_singleelectronwtopModelCR_bin3 --algo impact --redefineSignalPOIs r -P monotop_stat_error_singleelectronwtopModelCR_bin3 --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_monotop_stat_error_singleelectronwtopModelCR_bin4 --algo impact --redefineSignalPOIs r -P monotop_stat_error_singleelectronwtopModelCR_bin4 --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_monotop_stat_error_singleelectronwtopModelCR_bin5 --algo impact --redefineSignalPOIs r -P monotop_stat_error_singleelectronwtopModelCR_bin5 --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_mistag --algo impact --redefineSignalPOIs r -P mistag --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_norm_wjets --algo impact --redefineSignalPOIs r -P norm_wjets --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_SFTopMisTag --algo impact --redefineSignalPOIs r -P SFTopMisTag --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_monotop_loose_stat_error_dimuonModelCR_bin5 --algo impact --redefineSignalPOIs r -P monotop_loose_stat_error_dimuonModelCR_bin5 --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_monotop_loose_stat_error_dimuonModelCR_bin6 --algo impact --redefineSignalPOIs r -P monotop_loose_stat_error_dimuonModelCR_bin6 --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_monotop_loose_stat_error_dimuonModelCR_bin7 --algo impact --redefineSignalPOIs r -P monotop_loose_stat_error_dimuonModelCR_bin7 --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_monotop_stat_error_singleelectrontopModelCR_bin2 --algo impact --redefineSignalPOIs r -P monotop_stat_error_singleelectrontopModelCR_bin2 --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_monotop_stat_error_singleelectrontopModelCR_bin3 --algo impact --redefineSignalPOIs r -P monotop_stat_error_singleelectrontopModelCR_bin3 --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_monotop_stat_error_singleelectrontopModelCR_bin4 --algo impact --redefineSignalPOIs r -P monotop_stat_error_singleelectrontopModelCR_bin4 --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_monotop_stat_error_dimuonModelCR_bin6 --algo impact --redefineSignalPOIs r -P monotop_stat_error_dimuonModelCR_bin6 --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_monotop_stat_error_dimuonModelCR_bin7 --algo impact --redefineSignalPOIs r -P monotop_stat_error_dimuonModelCR_bin7 --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_monotop_stat_error_dielectronModelCR_bin1 --algo impact --redefineSignalPOIs r -P monotop_stat_error_dielectronModelCR_bin1 --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_wfacscale --algo impact --redefineSignalPOIs r -P wfacscale --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_wpdf --algo impact --redefineSignalPOIs r -P wpdf --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_ewk --algo impact --redefineSignalPOIs r -P ewk --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_monotop_stat_error_singlemuontopModelCR_bin3 --algo impact --redefineSignalPOIs r -P monotop_stat_error_singlemuontopModelCR_bin3 --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_monotop_stat_error_singlemuontopModelCR_bin4 --algo impact --redefineSignalPOIs r -P monotop_stat_error_singlemuontopModelCR_bin4 --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_monotop_stat_error_singlemuontopModelCR_bin5 --algo impact --redefineSignalPOIs r -P monotop_stat_error_singlemuontopModelCR_bin5 --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_sf_ele --algo impact --redefineSignalPOIs r -P sf_ele --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_sf_mu --algo impact --redefineSignalPOIs r -P sf_mu --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_track_ele --algo impact --redefineSignalPOIs r -P track_ele --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_monotop_loose_stat_error_wzModelCR_bin6 --algo impact --redefineSignalPOIs r -P monotop_loose_stat_error_wzModelCR_bin6 --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_monotop_loose_stat_error_wzModelCR_bin7 --algo impact --redefineSignalPOIs r -P monotop_loose_stat_error_wzModelCR_bin7 --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_monotop_stat_error_singlemuonwModel_bin1 --algo impact --redefineSignalPOIs r -P monotop_stat_error_singlemuonwModel_bin1 --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_monotop_loose_stat_error_singlemuontopModelCR_bin2 --algo impact --redefineSignalPOIs r -P monotop_loose_stat_error_singlemuontopModelCR_bin2 --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_monotop_loose_stat_error_singlemuontopModelCR_bin3 --algo impact --redefineSignalPOIs r -P monotop_loose_stat_error_singlemuontopModelCR_bin3 --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_monotop_loose_stat_error_singlemuontopModelCR_bin4 --algo impact --redefineSignalPOIs r -P monotop_loose_stat_error_singlemuontopModelCR_bin4 --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_SFTopTag --algo impact --redefineSignalPOIs r -P SFTopTag --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_ca15_jec --algo impact --redefineSignalPOIs r -P ca15_jec --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_gjethf --algo impact --redefineSignalPOIs r -P gjethf --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_monotop_loose_stat_error_singlemuonwModel_bin3 --algo impact --redefineSignalPOIs r -P monotop_loose_stat_error_singlemuonwModel_bin3 --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_monotop_loose_stat_error_singlemuonwModel_bin4 --algo impact --redefineSignalPOIs r -P monotop_loose_stat_error_singlemuonwModel_bin4 --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_monotop_loose_stat_error_singlemuonwModel_bin5 --algo impact --redefineSignalPOIs r -P monotop_loose_stat_error_singlemuonwModel_bin5 --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_monotop_loose_stat_error_singlemuonwtopModelCR_bin0 --algo impact --redefineSignalPOIs r -P monotop_loose_stat_error_singlemuonwtopModelCR_bin0 --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_monotop_loose_stat_error_singlemuonwtopModelCR_bin1 --algo impact --redefineSignalPOIs r -P monotop_loose_stat_error_singlemuonwtopModelCR_bin1 --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_monotop_loose_stat_error_singlemuonwtopModelCR_bin2 --algo impact --redefineSignalPOIs r -P monotop_loose_stat_error_singlemuonwtopModelCR_bin2 --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_pdf --algo impact --redefineSignalPOIs r -P pdf --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_PhotonEff --algo impact --redefineSignalPOIs r -P PhotonEff --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_wrenscale --algo impact --redefineSignalPOIs r -P wrenscale --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_monotop_stat_error_singlemuonwModel_bin2 --algo impact --redefineSignalPOIs r -P monotop_stat_error_singlemuonwModel_bin2 --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_monotop_stat_error_singlemuonwModel_bin3 --algo impact --redefineSignalPOIs r -P monotop_stat_error_singlemuonwModel_bin3 --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_monotop_stat_error_singlemuonwModel_bin4 --algo impact --redefineSignalPOIs r -P monotop_stat_error_singlemuonwModel_bin4 --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_monotop_loose_stat_error_singlemuontopModelCR_bin5 --algo impact --redefineSignalPOIs r -P monotop_loose_stat_error_singlemuontopModelCR_bin5 --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_monotop_loose_stat_error_singlemuontopModelCR_bin6 --algo impact --redefineSignalPOIs r -P monotop_loose_stat_error_singlemuontopModelCR_bin6 --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_monotop_loose_stat_error_singleelectrontopModelCR_bin0 --algo impact --redefineSignalPOIs r -P monotop_loose_stat_error_singleelectrontopModelCR_bin0 --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_veto_tau --algo impact --redefineSignalPOIs r -P veto_tau --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_wjethf --algo impact --redefineSignalPOIs r -P wjethf --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_zjethf --algo impact --redefineSignalPOIs r -P zjethf --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_monotop_loose_stat_error_singlemuonwModel_bin6 --algo impact --redefineSignalPOIs r -P monotop_loose_stat_error_singlemuonwModel_bin6 --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_monotop_loose_stat_error_singlemuonwModel_bin7 --algo impact --redefineSignalPOIs r -P monotop_loose_stat_error_singlemuonwModel_bin7 --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_monotop_loose_stat_error_singleelectronwModel_bin1 --algo impact --redefineSignalPOIs r -P monotop_loose_stat_error_singleelectronwModel_bin1 --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_monotop_loose_stat_error_singleelectronwtopModelCR_bin5 --algo impact --redefineSignalPOIs r -P monotop_loose_stat_error_singleelectronwtopModelCR_bin5 --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_monotop_loose_stat_error_singleelectronwtopModelCR_bin6 --algo impact --redefineSignalPOIs r -P monotop_loose_stat_error_singleelectronwtopModelCR_bin6 --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_norm_QCDgamma --algo impact --redefineSignalPOIs r -P norm_QCDgamma --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_norm_QCDmu --algo impact --redefineSignalPOIs r -P norm_QCDmu --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_norm_QCDsig --algo impact --redefineSignalPOIs r -P norm_QCDsig --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_monotop_loose_stat_error_wzModelCR_bin3 --algo impact --redefineSignalPOIs r -P monotop_loose_stat_error_wzModelCR_bin3 --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_monotop_loose_stat_error_wzModelCR_bin4 --algo impact --redefineSignalPOIs r -P monotop_loose_stat_error_wzModelCR_bin4 --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_monotop_loose_stat_error_wzModelCR_bin5 --algo impact --redefineSignalPOIs r -P monotop_loose_stat_error_wzModelCR_bin5 --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_monotop_loose_stat_error_singleelectrontopModelCR_bin1 --algo impact --redefineSignalPOIs r -P monotop_loose_stat_error_singleelectrontopModelCR_bin1 --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_monotop_loose_stat_error_singleelectrontopModelCR_bin2 --algo impact --redefineSignalPOIs r -P monotop_loose_stat_error_singleelectrontopModelCR_bin2 --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_monotop_loose_stat_error_singleelectrontopModelCR_bin3 --algo impact --redefineSignalPOIs r -P monotop_loose_stat_error_singleelectrontopModelCR_bin3 --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_monotop_stat_error_photonModelCR_bin4 --algo impact --redefineSignalPOIs r -P monotop_stat_error_photonModelCR_bin4 --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_monotop_stat_error_photonModelCR_bin5 --algo impact --redefineSignalPOIs r -P monotop_stat_error_photonModelCR_bin5 --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_monotop_stat_error_photonModelCR_bin6 --algo impact --redefineSignalPOIs r -P monotop_stat_error_photonModelCR_bin6 --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_monotop_stat_error_singleelectronwModel_bin1 --algo impact --redefineSignalPOIs r -P monotop_stat_error_singleelectronwModel_bin1 --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_monotop_stat_error_singleelectronwModel_bin2 --algo impact --redefineSignalPOIs r -P monotop_stat_error_singleelectronwModel_bin2 --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_monotop_stat_error_singleelectronwModel_bin3 --algo impact --redefineSignalPOIs r -P monotop_stat_error_singleelectronwModel_bin3 --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_monotop_loose_stat_error_singlemuonwtopModelCR_bin3 --algo impact --redefineSignalPOIs r -P monotop_loose_stat_error_singlemuonwtopModelCR_bin3 --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_monotop_loose_stat_error_singlemuonwtopModelCR_bin4 --algo impact --redefineSignalPOIs r -P monotop_loose_stat_error_singlemuonwtopModelCR_bin4 --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_monotop_loose_stat_error_singlemuonwtopModelCR_bin5 --algo impact --redefineSignalPOIs r -P monotop_loose_stat_error_singlemuonwtopModelCR_bin5 --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_monotop_stat_error_wzModelCR_bin7 --algo impact --redefineSignalPOIs r -P monotop_stat_error_wzModelCR_bin7 --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_renscale --algo impact --redefineSignalPOIs r -P renscale --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_facscale --algo impact --redefineSignalPOIs r -P facscale --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_monotop_stat_error_singleelectronwModel_bin7 --algo impact --redefineSignalPOIs r -P monotop_stat_error_singleelectronwModel_bin7 --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_monotop_loose_stat_error_singlemuonwModel_bin1 --algo impact --redefineSignalPOIs r -P monotop_loose_stat_error_singlemuonwModel_bin1 --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_monotop_loose_stat_error_singlemuonwModel_bin2 --algo impact --redefineSignalPOIs r -P monotop_loose_stat_error_singlemuonwModel_bin2 --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_monotop_stat_error_singleelectronwtopModelCR_bin6 --algo impact --redefineSignalPOIs r -P monotop_stat_error_singleelectronwtopModelCR_bin6 --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_monotop_loose_stat_error_singlemuontopModelCR_bin0 --algo impact --redefineSignalPOIs r -P monotop_loose_stat_error_singlemuontopModelCR_bin0 --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_monotop_loose_stat_error_singlemuontopModelCR_bin1 --algo impact --redefineSignalPOIs r -P monotop_loose_stat_error_singlemuontopModelCR_bin1 --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_lumi --algo impact --redefineSignalPOIs r -P lumi --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_met --algo impact --redefineSignalPOIs r -P met --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_norm_QCDe --algo impact --redefineSignalPOIs r -P norm_QCDe --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_monotop_loose_stat_error_singleelectronwModel_bin5 --algo impact --redefineSignalPOIs r -P monotop_loose_stat_error_singleelectronwModel_bin5 --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_monotop_loose_stat_error_singleelectronwModel_bin6 --algo impact --redefineSignalPOIs r -P monotop_loose_stat_error_singleelectronwModel_bin6 --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_monotop_loose_stat_error_singleelectronwModel_bin7 --algo impact --redefineSignalPOIs r -P monotop_loose_stat_error_singleelectronwModel_bin7 --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_monotop_loose_stat_error_singlemuonwtopModelCR_bin6 --algo impact --redefineSignalPOIs r -P monotop_loose_stat_error_singlemuonwtopModelCR_bin6 --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_monotop_loose_stat_error_singleelectronwtopModelCR_bin0 --algo impact --redefineSignalPOIs r -P monotop_loose_stat_error_singleelectronwtopModelCR_bin0 --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_monotop_loose_stat_error_singleelectronwtopModelCR_bin1 --algo impact --redefineSignalPOIs r -P monotop_loose_stat_error_singleelectronwtopModelCR_bin1 --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_monotop_stat_error_wzModelCR_bin4 --algo impact --redefineSignalPOIs r -P monotop_stat_error_wzModelCR_bin4 --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_monotop_stat_error_wzModelCR_bin5 --algo impact --redefineSignalPOIs r -P monotop_stat_error_wzModelCR_bin5 --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_monotop_stat_error_wzModelCR_bin6 --algo impact --redefineSignalPOIs r -P monotop_stat_error_wzModelCR_bin6 --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_monotop_stat_error_singleelectronwModel_bin4 --algo impact --redefineSignalPOIs r -P monotop_stat_error_singleelectronwModel_bin4 --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_monotop_stat_error_singleelectronwModel_bin5 --algo impact --redefineSignalPOIs r -P monotop_stat_error_singleelectronwModel_bin5 --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_monotop_stat_error_singleelectronwModel_bin6 --algo impact --redefineSignalPOIs r -P monotop_stat_error_singleelectronwModel_bin6 --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_monotop_loose_stat_error_singleelectronwtopModelCR_bin2 --algo impact --redefineSignalPOIs r -P monotop_loose_stat_error_singleelectronwtopModelCR_bin2 --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_monotop_loose_stat_error_singleelectronwtopModelCR_bin3 --algo impact --redefineSignalPOIs r -P monotop_loose_stat_error_singleelectronwtopModelCR_bin3 --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_monotop_loose_stat_error_singleelectronwtopModelCR_bin4 --algo impact --redefineSignalPOIs r -P monotop_loose_stat_error_singleelectronwtopModelCR_bin4 --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_monotop_stat_error_dielectronModelCR_bin2 --algo impact --redefineSignalPOIs r -P monotop_stat_error_dielectronModelCR_bin2 --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_monotop_stat_error_dielectronModelCR_bin3 --algo impact --redefineSignalPOIs r -P monotop_stat_error_dielectronModelCR_bin3 --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_monotop_stat_error_dielectronModelCR_bin4 --algo impact --redefineSignalPOIs r -P monotop_stat_error_dielectronModelCR_bin4 --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_w_ewk --algo impact --redefineSignalPOIs r -P w_ewk --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_monotop_loose_stat_error_photonModelCR_bin1 --algo impact --redefineSignalPOIs r -P monotop_loose_stat_error_photonModelCR_bin1 --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_monotop_loose_stat_error_photonModelCR_bin2 --algo impact --redefineSignalPOIs r -P monotop_loose_stat_error_photonModelCR_bin2 --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_monotop_loose_stat_error_singleelectrontopModelCR_bin4 --algo impact --redefineSignalPOIs r -P monotop_loose_stat_error_singleelectrontopModelCR_bin4 --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_monotop_loose_stat_error_singleelectrontopModelCR_bin5 --algo impact --redefineSignalPOIs r -P monotop_loose_stat_error_singleelectrontopModelCR_bin5 --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+>> combine -M MultiDimFit -n _paramFit_Test_monotop_loose_stat_error_singleelectrontopModelCR_bin6 --algo impact --redefineSignalPOIs r -P monotop_loose_stat_error_singleelectrontopModelCR_bin6 --floatOtherPOIs 1 --saveInactivePOI 1 --robustFit 1 --expectSignal 0 -m 125 -d ../correlated_2cat.root
+[?1034hHave POIs: ['r']
+Have nuisance parameters: 176
+Info in <TCanvas::Print>: pdf file ./impacts_monotop.pdf has been created
+TCanvas::Constructor:0: RuntimeWarning: Deleting canvas with same name: impacts_monotop
+Info in <TCanvas::Print>: Current canvas added to pdf file ./impacts_monotop.pdf
+TCanvas::Constructor:0: RuntimeWarning: Deleting canvas with same name: impacts_monotop
+Info in <TCanvas::Print>: Current canvas added to pdf file ./impacts_monotop.pdf
+TCanvas::Constructor:0: RuntimeWarning: Deleting canvas with same name: impacts_monotop
+Info in <TCanvas::Print>: Current canvas added to pdf file ./impacts_monotop.pdf
+TCanvas::Constructor:0: RuntimeWarning: Deleting canvas with same name: impacts_monotop
+Info in <TCanvas::Print>: Current canvas added to pdf file ./impacts_monotop.pdf
+TCanvas::Constructor:0: RuntimeWarning: Deleting canvas with same name: impacts_monotop
+Info in <TCanvas::Print>: Current canvas added to pdf file ./impacts_monotop.pdf
+[?1034h>> Doing page 0, have 30 parameters
+>> Doing page 1, have 30 parameters
+>> Doing page 2, have 30 parameters
+>> Doing page 3, have 30 parameters
+>> Doing page 4, have 30 parameters
+>> Doing page 5, have 26 parameters

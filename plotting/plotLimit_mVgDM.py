@@ -51,12 +51,14 @@ class Limit():
     self.down1=0
     self.down2=0
     self.obs=0
+  def __str__(self):
+    return '%5.2f %5.3f %f'%(self.mMed, self.gDM, self.obs)
 
 LimitPoint = namedtuple('LimitPoint',['mV','mChi','gdmv','gdma','gqv','gqa','limit'])
 def parseLimitFiles2D(filepath):
   # returns a list of LimitPoints 
   limits = [] 
-  filelist = glob(filepath)
+  filelist = sorted(glob(filepath))
   for f in filelist:
     ff = f.split('/')[-1].split('_')
     mMed = int(ff[1])
@@ -72,14 +74,21 @@ def parseLimitFiles2D(filepath):
       t = fin.Get('limit')
       if not t:
         continue
+      scaling = fin.Get('scaling')
+      if scaling:
+        scaling = float(scaling.GetTitle())
+      else:
+        scaling = 1.
       nL = t.GetEntries()
       limitNames = ['down2','down1','cent','up1','up2','obs']
       for iL in xrange(nL):
         t.GetEntry(iL)
         val = t.limit
-        val = val / 0.68
+        val = val * scaling
+        val = val / 0.68 
         setattr(l,limitNames[iL],val)
       lp = LimitPoint(mMed/1000.,mChi,gdmv,gdma,gqv,gqa,l)
+#      print l
       limits.append(lp)
     except Exception as e:
       print e
@@ -225,19 +234,13 @@ def makePlot2D(filepath,foutname,medcfg,gdmcfg,header):
   tex2.SetLineWidth(2);
   tex2.SetTextSize(0.04);
   tex2.SetTextAngle(270);
-  tex2.DrawLatex(0.965,0.93,"Expected #sigma_{95% CL}/#sigma_{theory}");
+  tex2.DrawLatex(0.965,0.93,"Observed #sigma_{95% CL}/#sigma_{theory}");
 
   texCMS = root.TLatex(0.12,0.94,"#bf{CMS}");
   texCMS.SetNDC();
   texCMS.SetTextFont(42);
   texCMS.SetLineWidth(2);
   texCMS.SetTextSize(0.05); texCMS.Draw();
-
-#  texPrelim = root.TLatex(0.2,0.94,"#it{Preliminary}");
-#  texPrelim.SetNDC();
-#  texPrelim.SetTextFont(42);
-#  texPrelim.SetLineWidth(2);
-#  texPrelim.SetTextSize(0.04); texPrelim.Draw();
 
   root.gPad.SetRightMargin(0.15);
   root.gPad.SetTopMargin(0.07);
@@ -249,6 +252,15 @@ def makePlot2D(filepath,foutname,medcfg,gdmcfg,header):
   canvas.SaveAs(foutname+'.png')
   canvas.SaveAs(foutname+'.pdf')
 
+  texPrelim = root.TLatex(0.2,0.94,"#it{Preliminary}");
+  texPrelim.SetNDC();
+  texPrelim.SetTextFont(42);
+  texPrelim.SetLineWidth(2);
+  texPrelim.SetTextSize(0.05); texPrelim.Draw();
+
+  canvas.SaveAs(foutname+'_prelim.png')
+  canvas.SaveAs(foutname+'_prelim.pdf')
+
   fsave = root.TFile(foutname+'.root','RECREATE')
   fsave.WriteTObject(hs['exp'],'hexp')
   fsave.WriteTObject(gs['exp'],'gexp')
@@ -259,12 +271,18 @@ plotsdir = plotConfig.plotDir
 
 makePlot2D(plotConfig.scansDir+'vector/gdmv_*_gdma_0_gv_0p25_ga_0/higgsCombinefcnc_*_1.Asymptotic.mH120.root',
            plotsdir+'fcnc2d_obs_gdmv_mV',
-           (100,0.3,2.2),
-           (100,0.1,2,'g_{DM}^{V}'),
+           (100,0.2,2.3),
+           (100,0.01,2,'g_{#chi}^{V}'),
            'm_{#chi} = 1 GeV, g_{q}^{V} = 0.25 [FCNC]')
+
+makePlot2D(plotConfig.scansDir+'vector/gdmv_0_gdma_*_gv_0_ga_0p25/higgsCombinefcnc_*_1.Asymptotic.mH120.root',
+           plotsdir+'fcnc2d_obs_gdma_mV',
+           (100,0.2,2.2),
+           (100,0.01,2,'g_{#chi}^{A}'),
+           'm_{#chi} = 1 GeV, g_{q}^{A} = 0.25 [FCNC]')
 
 # makePlot2D(plotConfig.scansDir+'vector/gdmv_0_gdma_*_gv_0_ga_0p25/higgsCombinefcnc_*_1.Asymptotic.mH120.root',
 #            plotsdir+'fcnc2d_obs_gdma_mV',
 #            (100,300.,2200.),
-#            (40,0.1,2,'g_{DM}^{A}'),
+#            (40,0.1,2,'g_{#chi}^{A}'),
 #            'm_{#chi} = 1 GeV, g_{q}^{A} = 0.25 [FCNC]')

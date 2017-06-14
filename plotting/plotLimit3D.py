@@ -10,16 +10,15 @@ from math import log10
 import numpy as np
 from scipy.interpolate import LinearNDInterpolator as LNDI
 
-root.gROOT.SetBatch(1)
+#root.gROOT.SetBatch(1)
 
 ##Color palette
-root.gStyle.SetPalette(root.kBird)
 #root.gStyle.SetPalette(root.kDarkBodyRadiator)
 #ncontours = 999;
-root.TColor.InitializeColors();
+#root.TColor.InitializeColors();
 ##stops = [ 0.0000, 0.1250, 0.2500, 0.3750, 0.5000, 0.6250, 0.7500, 0.8750, 1.0000]
-stops = [0.,1.]
-green = blue = red = [1.,1.]
+#stops = [0.,1.]
+#green = blue = red = [1.,1.]
 #stops = [ 0.0000,       0.10,   0.200,     0.30,      0.4000,      0.50,    0.7500,    0.8750,    1.0000]
 #red   = [ 243./255., 243./255., 240./255., 240./255., 241./255., 239./255., 186./255., 151./255., 129./255.]
 #green = [   0./255.,  46./255.,  99./255., 149./255., 194./255., 220./255., 183./255., 166./255., 147./255.]
@@ -31,7 +30,8 @@ green = blue = red = [1.,1.]
 #blueArray  = array('d',blue)
 #
 #root.TColor.CreateGradientColorTable(2, array('d',stops), array('d',red), array('d',green), array('d',blue), 999);
-#root.gStyle.SetNumberContours(ncontours);
+root.gStyle.SetNumberContours(99);
+root.gStyle.SetPalette(root.kBird)
 
 root.gStyle.SetLabelSize(0.035,"X");
 root.gStyle.SetLabelSize(0.035,"Y");
@@ -78,12 +78,13 @@ class Limit():
 
 LimitPoint = namedtuple('LimitPoint',['mV','mChi','gdmv','gdma','gqv','gqa','limit'])
 def parseLimitFiles2D(filepath):
+  print filepath
   # returns a list of LimitPoints 
   limits = [] 
   filelist = glob(filepath)
   for f in filelist:
     ff = f.split('/')[-1].split('_')
-    mMed = int(ff[1])
+    mMed = int(ff[1]) / 1000.
     mChi = int(ff[2].split('.')[0])
     ff = f.split('/')[-2].split('_')
     gdmv = float(ff[1].replace('p','.'))
@@ -94,11 +95,17 @@ def parseLimitFiles2D(filepath):
     try:
       fin = TFile(f)
       t = fin.Get('limit')
+      scaling = fin.Get('scaling')
+      if scaling:
+        scaling = float(scaling.GetTitle())
+      else:
+        scaling = 1.
       nL = t.GetEntries()
       limitNames = ['down2','down1','cent','up1','up2','obs']
       for iL in xrange(nL):
         t.GetEntry(iL)
         val = t.limit
+        val = val * scaling
         val = val / 0.68
         setattr(l,limitNames[iL],val)
       lp = LimitPoint(mMed,mChi,gdmv,gdma,gqv,gqa,l)
@@ -107,6 +114,7 @@ def parseLimitFiles2D(filepath):
 #      print e
       pass
     fin.Close()
+  print len(limits)
   return limits
 
 def makePlot3D(filepath,foutname,gqcfg,gdmcfg,medcfg):
@@ -120,10 +128,11 @@ def makePlot3D(filepath,foutname,gqcfg,gdmcfg,medcfg):
 
   interp = LNDI(points,values)
 
-  surface = TH2D('hsurf','',gqcfg[0],gqcfg[1],gqcfg[2],gdmcfg[0],gdmcfg[1],gdmcfg[2])
+  #surface = TH2D('hsurf','',gqcfg[0],gqcfg[1],gqcfg[2],gdmcfg[0],gdmcfg[1],gdmcfg[2])
+  surface = TH2D('hsurf','',gqcfg[0],0,gqcfg[2],gdmcfg[0],0,gdmcfg[2])
   surface.GetXaxis().SetTitle(gqcfg[3])
   surface.GetYaxis().SetTitle(gdmcfg[3])
-  surface.GetZaxis().SetTitle('Excluded m_{V} [GeV]')
+  surface.GetZaxis().SetTitle('95% CL excluded m_{V} [TeV]')
 
   xstep = (gqcfg[2]-gqcfg[1])/gqcfg[0]
   ystep = (gdmcfg[2]-gdmcfg[1])/gdmcfg[0]
@@ -131,7 +140,7 @@ def makePlot3D(filepath,foutname,gqcfg,gdmcfg,medcfg):
   for x in np.arange(gqcfg[1],gqcfg[2]+xstep,xstep):
     for y in np.arange(gdmcfg[1],gdmcfg[2]+ystep,ystep):
       z_limit = 0.
-      z_limit = binary_search(x,y,medcfg[0],medcfg[1],interp,1)
+      z_limit = binary_search(x,y,medcfg[0],medcfg[1],interp,0.001)
 #      for z in np.arange(medcfg[0],medcfg[1],zstep):
 #        if y>gdmcfg[2]:
 #          break
@@ -141,8 +150,8 @@ def makePlot3D(filepath,foutname,gqcfg,gdmcfg,medcfg):
 #          z_limit = z
 #          break
 #      print x,y,z_limit
-      if z_limit==300.:
-        z_limit = 0
+      # if z_limit==medcfg[0]:
+      #   z_limit = 0
       surface.SetBinContent(surface.FindBin(x,y),z_limit)
 
   global iC
@@ -155,10 +164,40 @@ def makePlot3D(filepath,foutname,gqcfg,gdmcfg,medcfg):
   surface.GetXaxis().SetTitleOffset(1.2)
   surface.GetYaxis().SetTitleOffset(1.2)
   surface.GetZaxis().SetTitleOffset(1.2)
+  surface.GetXaxis().SetNdivisions(508)
+  surface.GetYaxis().SetNdivisions(508)
+  surface.GetXaxis().CenterTitle()
+  surface.GetYaxis().CenterTitle()
+  surface.SetMinimum(medcfg[0])
+
   surface.Draw('CONT4Z')
+
+  tex = root.TLatex();
+  tex.SetNDC();
+  tex.SetTextFont(42);
+  tex.SetLineWidth(2);
+  tex.SetTextSize(0.040);
+  tex.Draw();
+  tex.DrawLatex(0.57,0.94,"35.8 fb^{-1} (13 TeV)");
+
+  texCMS = root.TLatex(0.12,0.94,"#bf{CMS}");
+  texCMS.SetNDC();
+  texCMS.SetTextFont(42);
+  texCMS.SetLineWidth(2);
+  texCMS.SetTextSize(0.05); texCMS.Draw();
 
   canvas.SaveAs(foutname.replace('3d','3dproj')+'.png')
   canvas.SaveAs(foutname.replace('3d','3dproj')+'.pdf')
+  
+  texPrelim = root.TLatex(0.2,0.94,"#it{Preliminary}");
+  texPrelim.SetNDC();
+  texPrelim.SetTextFont(42);
+  texPrelim.SetLineWidth(2);
+  texPrelim.SetTextSize(0.05); texPrelim.Draw();
+
+  canvas.SaveAs(foutname.replace('3d','3dproj_prelim')+'.png')
+  canvas.SaveAs(foutname.replace('3d','3dproj_prelim')+'.pdf')
+  
 
   canvas = ROOT.TCanvas("canvas%i"%iC, '',  1000, 800)
   iC+=1
@@ -169,8 +208,32 @@ def makePlot3D(filepath,foutname,gqcfg,gdmcfg,medcfg):
   surface.GetZaxis().SetTitleOffset(1.3)
   surface.Draw('SURF1')
 
+  tex = root.TLatex();
+  tex.SetNDC();
+  tex.SetTextFont(42);
+  tex.SetLineWidth(2);
+  tex.SetTextSize(0.040);
+  tex.Draw();
+  tex.DrawLatex(0.05,0.9,"35.8 fb^{-1} (13 TeV)");
+
+  texCMS = root.TLatex(0.05,0.94,"#bf{CMS}");
+  texCMS.SetNDC();
+  texCMS.SetTextFont(42);
+  texCMS.SetLineWidth(2);
+  texCMS.SetTextSize(0.05); texCMS.Draw();
+
   canvas.SaveAs(foutname+'.png')
   canvas.SaveAs(foutname+'.pdf')
+  
+  texPrelim = root.TLatex(0.13,0.94,"#it{Preliminary}");
+  texPrelim.SetNDC();
+  texPrelim.SetTextFont(42);
+  texPrelim.SetLineWidth(2);
+  texPrelim.SetTextSize(0.05); texPrelim.Draw();
+
+  canvas.SaveAs(foutname+'_prelim.png')
+  canvas.SaveAs(foutname+'_prelim.pdf')
+  
 
   fsave = root.TFile(foutname+'.root','RECREATE')
   fsave.WriteTObject(surface,'hexp')
@@ -181,7 +244,13 @@ plotsdir = plotConfig.plotDir
 
 
 makePlot3D(plotConfig.scansDir+'vector/gdmv_*_gdma_0_gv_*_ga_0/higgsCombinefcnc_*_1.Asymptotic.mH120.root',
-           plotsdir+'fcnc3d_obs_gdmv_gQ_mV',
+           plotsdir+'fcnc3d_obs_vector',
            (20,0.01,1.,'g_{q}^{V}'),
-           (20,0.05,2,'g_{DM}^{V}'),
-           (300,3000))
+           (20,0.05,2,'g_{#chi}^{V}'),
+           (0.2,3.))
+
+# makePlot3D(plotConfig.scansDir+'vector/gdmv_0_gdma_*_gv_0_ga_*/higgsCombinefcnc_*_1.Asymptotic.mH120.root',
+#            plotsdir+'fcnc3d_obs_axial',
+#            (20,0.01,1.,'g_{q}^{A}'),
+#            (20,0.05,2,'g_{#chi}^{A}'),
+#            (300,3000))

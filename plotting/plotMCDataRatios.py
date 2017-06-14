@@ -45,7 +45,7 @@ def scale(h):
         h_scale.SetBinError(ib,h.GetBinError(ib)/width)
     return h_scale
 
-def plot_ratio(num_region,den_region,cat,folder='shapes_prefit'):
+def plot_ratio(num_region,den_region,cat,folder='shapes_prefit',hi=None):
     num = regions[num_region]
     den = regions[den_region]
 
@@ -100,6 +100,9 @@ def plot_ratio(num_region,den_region,cat,folder='shapes_prefit'):
     hmc_err.SetFillColor(kGray)
     hmc_err.GetXaxis().SetTitle('U [GeV]')
     hmc_err.GetYaxis().SetTitle('')
+    if hi:
+        for h in [hmc_err, hmc, hdata]:
+            h.SetMaximum(hi)
     hmc_err.Draw('e2')
     hmc.Draw('hist same')
     hdata.Draw('elp same')
@@ -138,9 +141,9 @@ def plot_ratio(num_region,den_region,cat,folder='shapes_prefit'):
     del c
 
 
-plot_ratio('pho','zmm','tight',folder='shapes_fit_b')
+plot_ratio('pho','zmm','tight',folder='shapes_fit_b',hi=49)
 
-plot_ratio('pho','zmm','loose',folder='shapes_fit_b')
+plot_ratio('pho','zmm','loose',folder='shapes_fit_b',hi=54)
 
 plot_ratio('pho','zee','tight',folder='shapes_fit_b')
 
@@ -150,9 +153,9 @@ plot_ratio('wmn','zmm','tight',folder='shapes_fit_b')
 
 plot_ratio('wmn','zmm','loose',folder='shapes_fit_b')
 
-plot_ratio('wen','zee','tight',folder='shapes_fit_b')
+plot_ratio('wen','zee','tight',folder='shapes_fit_b',hi=31)
 
-plot_ratio('wen','zee','loose',folder='shapes_fit_b')
+plot_ratio('wen','zee','loose',folder='shapes_fit_b',hi=22)
 
 plot_ratio('wen','pho','tight',folder='shapes_fit_b')
 

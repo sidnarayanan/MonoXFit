@@ -150,6 +150,9 @@ def plot_ratio(process,suffix = ''):
         for k in sorted(colors) + sorted(variations):
             if k in already_done or k not in variations:
                 continue
+            if 'di' in process or 'pho' in process:
+                if k=='btag' or k=='mistag':
+                    continue
             already_done.append(k)
             v = variations[k]
             if k in colors:

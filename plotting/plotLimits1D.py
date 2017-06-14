@@ -45,7 +45,7 @@ def parseLimitFiles2D(filepath,br=0.68):
   filelist = glob(filepath)
   for f in filelist:
     ff = f.split('/')[-1].split('_')
-    mMed = int(ff[1])
+    mMed = int(ff[1]) / 1000.
     mChi = int(ff[2].split('.')[0])
     l = Limit(mMed,mChi)
     try:
@@ -114,8 +114,8 @@ def makePlot1D(filepath,foutname,plottitle='',masstitle=''):
   c.SetLogy()
   c.SetLeftMargin(.15)
 
-  graph2Sigma.GetXaxis().SetTitle(masstitle+' [GeV]')
-  graph2Sigma.GetYaxis().SetTitle('95% C.L. upper limit [#sigma/#sigma_{theory}]')  
+  graph2Sigma.GetXaxis().SetTitle(masstitle+' [TeV]')
+  graph2Sigma.GetYaxis().SetTitle('Observed #sigma_{95% CL}/#sigma_{theory}')  
   c2 = root.kOrange
   c1 = root.kGreen+1
   graph2Sigma.SetLineColor(c2)
@@ -123,7 +123,7 @@ def makePlot1D(filepath,foutname,plottitle='',masstitle=''):
   graph2Sigma.SetFillColor(c2)
   graph1Sigma.SetFillColor(c1)
   graph2Sigma.SetMinimum(0.5*minval)
-  graph2Sigma.SetMaximum(10*maxval)
+  graph2Sigma.SetMaximum(100*maxval)
   graphCent.SetLineWidth(2)
   graphCent.SetLineStyle(2)
   graphObs.SetLineColor(1)
@@ -173,19 +173,16 @@ def makePlot1D(filepath,foutname,plottitle='',masstitle=''):
 
   label = TLatex()
   label.SetNDC()
-  label.SetTextSize(0.8*c.GetTopMargin())
+  label.SetTextSize(0.7*c.GetTopMargin())
   label.SetTextFont(62)
   label.SetTextAlign(11)
   label.DrawLatex(0.15,0.94,"CMS")
-  label.SetTextFont(52)
-  label.SetTextSize(0.6*c.GetTopMargin())
-#  label.DrawLatex(0.25,0.94,"Preliminary")
   label.SetTextFont(42)
-  label.SetTextSize(0.7*c.GetTopMargin())
   label.DrawLatex(0.19,0.83,plottitle)
   if 'Resonant' in plottitle:
-    label.DrawLatex(0.19,0.75,"a_{SR} = b_{SR} = %s"%coupling)
-    label.DrawLatex(0.19,0.68,"m_{#chi}=100 GeV")
+    label.DrawLatex(0.19,0.75,"a_{SR}^{q} = b_{SR}^{q} = %s"%coupling)
+    label.DrawLatex(0.19,0.68,"a_{SR}^{1/2} = b_{SR}^{1/2} = 0.2")
+    label.DrawLatex(0.19,0.61,"m_{#chi}=100 GeV")
   else:
     label.DrawLatex(0.19,0.75,"g_{DM}^{V}=1,g_{q}^{V}=0.25")
     label.DrawLatex(0.19,0.68,"m_{#chi}=1 GeV")
@@ -196,6 +193,13 @@ def makePlot1D(filepath,foutname,plottitle='',masstitle=''):
 
   c.SaveAs(foutname+'.pdf')
   c.SaveAs(foutname+'.png')
+
+  label.SetTextFont(52)
+  label.SetTextAlign(11)
+  label.DrawLatex(0.23,0.94,"Preliminary")
+
+  c.SaveAs(foutname+'_prelim.pdf')
+  c.SaveAs(foutname+'_prelim.png')
 
 plotsdir = plotConfig.plotDir
 

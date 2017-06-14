@@ -72,11 +72,17 @@ def parseLimitFiles2D(filepath):
       t = fin.Get('limit')
       if not t:
         continue
+      scaling = fin.Get('scaling')
+      if scaling:
+        scaling = float(scaling.GetTitle())
+      else:
+        scaling = 1.
       nL = t.GetEntries()
       limitNames = ['down2','down1','cent','up1','up2','obs']
       for iL in xrange(nL):
         t.GetEntry(iL)
         val = t.limit
+        val = val * scaling
         val = val / 0.68
         setattr(l,limitNames[iL],val)
       lp = LimitPoint(mMed/1000.,mChi,gdmv,gdma,gqv,gqa,l)
@@ -225,19 +231,13 @@ def makePlot2D(filepath,foutname,medcfg,gqcfg,header):
   tex2.SetLineWidth(2);
   tex2.SetTextSize(0.04);
   tex2.SetTextAngle(270);
-  tex2.DrawLatex(0.965,0.93,"Expected #sigma_{95% CL}/#sigma_{theory}");
+  tex2.DrawLatex(0.965,0.93,"#sigma_{95% CL}/#sigma_{theory}");
 
   texCMS = root.TLatex(0.12,0.94,"#bf{CMS}");
   texCMS.SetNDC();
   texCMS.SetTextFont(42);
   texCMS.SetLineWidth(2);
   texCMS.SetTextSize(0.05); texCMS.Draw();
-
-#  texPrelim = root.TLatex(0.2,0.94,"#it{Preliminary}");
-#  texPrelim.SetNDC();
-#  texPrelim.SetTextFont(42);
-#  texPrelim.SetLineWidth(2);
-#  texPrelim.SetTextSize(0.04); texPrelim.Draw();
 
   root.gPad.SetRightMargin(0.15);
   root.gPad.SetTopMargin(0.07);
@@ -249,6 +249,15 @@ def makePlot2D(filepath,foutname,medcfg,gqcfg,header):
   canvas.SaveAs(foutname+'.png')
   canvas.SaveAs(foutname+'.pdf')
 
+  texPrelim = root.TLatex(0.2,0.94,"#it{Preliminary}");
+  texPrelim.SetNDC();
+  texPrelim.SetTextFont(42);
+  texPrelim.SetLineWidth(2);
+  texPrelim.SetTextSize(0.05); texPrelim.Draw();
+
+  canvas.SaveAs(foutname+'_prelim.png')
+  canvas.SaveAs(foutname+'_prelim.pdf')
+
   fsave = root.TFile(foutname+'.root','RECREATE')
   fsave.WriteTObject(hs['exp'],'hexp')
   fsave.WriteTObject(gs['exp'],'gexp')
@@ -259,12 +268,18 @@ plotsdir = plotConfig.plotDir
 
 makePlot2D(plotConfig.scansDir+'vector/gdmv_1p0_gdma_0_gv_*_ga_0/higgsCombinefcnc_*_1.Asymptotic.mH120.root',
            plotsdir+'fcnc2d_obs_gqv_mV',
-           (100,0.3,2.2),
+           (100,0.2,2.3),
            (100,0.01,1.,'g_{q}^{V}'),
-           'm_{#chi} = 1 GeV, g_{DM}^{V} = 1 [FCNC]')
+           'm_{#chi} = 1 GeV, g_{#chi}^{V} = 1 [FCNC]')
+
+makePlot2D(plotConfig.scansDir+'vector/gdmv_0_gdma_1p0_gv_0_ga_*/higgsCombinefcnc_*_1.Asymptotic.mH120.root',
+           plotsdir+'fcnc2d_obs_gqa_mV',
+           (100,0.2,2.3),
+           (100,0.01,1.,'g_{q}^{A}'),
+           'm_{#chi} = 1 GeV, g_{#chi}^{A} = 1 [FCNC]')
 
 # makePlot2D(plotConfig.scansDir+'fcnc/gdmv_*_gdma_1p0_gv_0_ga_*/higgsCombinefcnc_*_1.Asymptotic.mH120.root',
 #            plotsdir+'fcnc2d_obs_gqa_mV',
 #            (100,300.,2200.),
 #            (40,0.01,1.,'g_{q}^{A}'),
-#            'm_{#chi} = 1 GeV, g_{DM}^{A} = 1 [FCNC]')
+#            'm_{#chi} = 1 GeV, g_{#chi}^{A} = 1 [FCNC]')

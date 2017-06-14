@@ -63,11 +63,17 @@ def parseLimitFiles2D(filepath):
     try:
       fin = TFile(f)
       t = fin.Get('limit')
+      scaling = fin.Get('scaling')
+      if scaling:
+        scaling = float(scaling.GetTitle())
+      else:
+        scaling = 1.
       nL = t.GetEntries()
       limitNames = ['down2','down1','cent','up1','up2','obs']
       for iL in xrange(nL):
         t.GetEntry(iL)
         val = t.limit
+        val = val * scaling
         val = val / 0.68
         setattr(l,limitNames[iL],val)
       limits[(mMed/1000.,mChi)] = l
@@ -226,19 +232,13 @@ def makePlot2D(filepath,foutname,medcfg,chicfg,header='g_{q}^{V} = 0.25, g_{DM}^
   tex2.SetLineWidth(2);
   tex2.SetTextSize(0.04);
   tex2.SetTextAngle(270);
-  tex2.DrawLatex(0.965,0.93,"#sigma_{95% CL}/#sigma_{theory}");
+  tex2.DrawLatex(0.965,0.93,"Observed #sigma_{95% CL}/#sigma_{theory}");
 
   texCMS = root.TLatex(0.12,0.94,"#bf{CMS}");
   texCMS.SetNDC();
   texCMS.SetTextFont(42);
   texCMS.SetLineWidth(2);
   texCMS.SetTextSize(0.05); texCMS.Draw();
-
-#  texPrelim = root.TLatex(0.2,0.94,"#it{Preliminary}");
-#  texPrelim.SetNDC();
-#  texPrelim.SetTextFont(42);
-#  texPrelim.SetLineWidth(2);
-#  texPrelim.SetTextSize(0.04); texPrelim.Draw();
 
   root.gPad.SetRightMargin(0.15);
   root.gPad.SetTopMargin(0.07);
@@ -249,6 +249,15 @@ def makePlot2D(filepath,foutname,medcfg,chicfg,header='g_{q}^{V} = 0.25, g_{DM}^
 
   canvas.SaveAs(foutname+'.png')
   canvas.SaveAs(foutname+'.pdf')
+  
+  texPrelim = root.TLatex(0.2,0.94,"#it{Preliminary}");
+  texPrelim.SetNDC();
+  texPrelim.SetTextFont(42);
+  texPrelim.SetLineWidth(2);
+  texPrelim.SetTextSize(0.05); texPrelim.Draw();
+
+  canvas.SaveAs(foutname+'_prelim.png')
+  canvas.SaveAs(foutname+'_prelim.pdf')
   
   canvas.SetGrid()
 
@@ -278,15 +287,16 @@ def makePlot2D(filepath,foutname,medcfg,chicfg,header='g_{q}^{V} = 0.25, g_{DM}^
 plotsdir = plotConfig.plotDir
 
 #makePlot2D(plotConfig.scansDir+'vector/nominal/higgsCombinefcnc_*.Asymptotic.mH120.root',plotsdir+'fcnc2d_obs_vector',(100,200.,2200.),(100,10.,1050.),'g_{q}^{V} = 0.25, g_{DM}^{V} = 1 [FCNC]',True)
-makePlot2D(plotConfig.scansDir+'vector/nominal/higgsCombinefcnc_*.Asymptotic.mH120.root',plotsdir+'fcnc2d_obs_vector',(100,.3,2.5),(100,10.,1200.),'g_{q}^{V} = 0.25, g_{DM}^{V} = 1 [FCNC]',True)
-makePlot2D(plotConfig.scansDir+'vector/gdmv_0p25_gdma_0_gv_0p25_ga_0/higgsCombinefcnc_*.Asymptotic.mH120.root',plotsdir+'fcnc2d_obs_vector_dm0p25_q0p25',(100,.3,2.5),(100,10.,1200.),'g_{q}^{V} = 0.25, g_{DM}^{V} = 0.25 [FCNC]',True)
-makePlot2D(plotConfig.scansDir+'vector/gdmv_2p0_gdma_0_gv_1_ga_0/higgsCombinefcnc_*.Asymptotic.mH120.root',plotsdir+'fcnc2d_obs_vector_dm2p0_q1',(100,.3,3),(100,10.,1500.),'g_{q}^{V} = 1, g_{DM}^{V} = 2 [FCNC]',True)
-makePlot2D(plotConfig.scansDir+'vector/gdmv_1p0_gdma_0_gv_0p01_ga_0/higgsCombinefcnc_*.Asymptotic.mH120.root',plotsdir+'fcnc2d_obs_vector_dm210_q0p01',(100,.3,2.5),(100,10.,1250.),'g_{q}^{V} = 0.01, g_{DM}^{V} = 2 [FCNC]',True)
-makePlot2D(plotConfig.scansDir+'vector/gdmv_1p0_gdma_0_gv_0p05_ga_0/higgsCombinefcnc_*.Asymptotic.mH120.root',plotsdir+'fcnc2d_obs_vector_dm210_q0p05',(100,.3,2.5),(100,10.,1250.),'g_{q}^{V} = 0.05, g_{DM}^{V} = 1 [FCNC]',True)
-makePlot2D(plotConfig.scansDir+'vector/gdmv_1p0_gdma_0_gv_0p1_ga_0/higgsCombinefcnc_*.Asymptotic.mH120.root',plotsdir+'fcnc2d_obs_vector_dm210_q0p1',(100,.3,2.5),(100,10.,1250.),'g_{q}^{V} = 0.1, g_{DM}^{V} = 1 [FCNC]',True)
-makePlot2D(plotConfig.scansDir+'vector/gdmv_1p0_gdma_0_gv_0p3_ga_0/higgsCombinefcnc_*.Asymptotic.mH120.root',plotsdir+'fcnc2d_obs_vector_dm210_q0p3',(100,.3,2.5),(100,10.,1250.),'g_{q}^{V} = 0.3, g_{DM}^{V} = 1 [FCNC]',True)
-makePlot2D(plotConfig.scansDir+'vector/gdmv_1p0_gdma_0_gv_0p5_ga_0/higgsCombinefcnc_*.Asymptotic.mH120.root',plotsdir+'fcnc2d_obs_vector_dm210_q0p5',(100,.3,2.5),(100,10.,1250.),'g_{q}^{V} = 0.5, g_{DM}^{V} = 1 [FCNC]',True)
-makePlot2D(plotConfig.scansDir+'vector/gdmv_1p0_gdma_0_gv_0p75_ga_0/higgsCombinefcnc_*.Asymptotic.mH120.root',plotsdir+'fcnc2d_obs_vector_dm210_q0p75',(100,.3,2.5),(100,10.,1250.),'g_{q}^{V} = 0.75, g_{DM}^{V} = 1 [FCNC]',True)
-makePlot2D(plotConfig.scansDir+'vector/gdmv_1p0_gdma_0_gv_1_ga_0/higgsCombinefcnc_*.Asymptotic.mH120.root',plotsdir+'fcnc2d_obs_vector_dm210_q1',(100,.3,2.5),(100,10.,1250.),'g_{q}^{V} = 1, g_{DM}^{V} = 1 [FCNC]',True)
+makePlot2D(plotConfig.scansDir+'vector/nominal/higgsCombinefcnc_*.Asymptotic.mH120.root',plotsdir+'fcnc2d_obs_vector',(150,.2,2.3),(150,10.,1050.),'g_{q}^{V} = 0.25, g_{#chi}^{V} = 1 [FCNC]',True)
+makePlot2D(plotConfig.scansDir+'vector/gdmv_0_gdma_1p0_gv_0_ga_0p25/higgsCombinefcnc_*.Asymptotic.mH120.root',plotsdir+'fcnc2d_obs_axial',(100,.2,2.3),(100,10.,1050.),'g_{q}^{A} = 0.25, g_{#chi}^{A} = 1 [FCNC]',True)
+#makePlot2D(plotConfig.scansDir+'vector/gdmv_0p25_gdma_0_gv_0p25_ga_0/higgsCombinefcnc_*.Asymptotic.mH120.root',plotsdir+'fcnc2d_obs_vector_dm0p25_q0p25',(100,.3,2.5),(100,10.,1200.),'g_{q}^{V} = 0.25, g_{DM}^{V} = 0.25 [FCNC]',True)
+#makePlot2D(plotConfig.scansDir+'vector/gdmv_2p0_gdma_0_gv_1_ga_0/higgsCombinefcnc_*.Asymptotic.mH120.root',plotsdir+'fcnc2d_obs_vector_dm2p0_q1',(100,.3,3),(100,10.,1500.),'g_{q}^{V} = 1, g_{DM}^{V} = 2 [FCNC]',True)
+#makePlot2D(plotConfig.scansDir+'vector/gdmv_1p0_gdma_0_gv_0p01_ga_0/higgsCombinefcnc_*.Asymptotic.mH120.root',plotsdir+'fcnc2d_obs_vector_dm210_q0p01',(100,.3,2.5),(100,10.,1250.),'g_{q}^{V} = 0.01, g_{DM}^{V} = 2 [FCNC]',True)
+#makePlot2D(plotConfig.scansDir+'vector/gdmv_1p0_gdma_0_gv_0p05_ga_0/higgsCombinefcnc_*.Asymptotic.mH120.root',plotsdir+'fcnc2d_obs_vector_dm210_q0p05',(100,.3,2.5),(100,10.,1250.),'g_{q}^{V} = 0.05, g_{DM}^{V} = 1 [FCNC]',True)
+#makePlot2D(plotConfig.scansDir+'vector/gdmv_1p0_gdma_0_gv_0p1_ga_0/higgsCombinefcnc_*.Asymptotic.mH120.root',plotsdir+'fcnc2d_obs_vector_dm210_q0p1',(100,.3,2.5),(100,10.,1250.),'g_{q}^{V} = 0.1, g_{DM}^{V} = 1 [FCNC]',True)
+#makePlot2D(plotConfig.scansDir+'vector/gdmv_1p0_gdma_0_gv_0p3_ga_0/higgsCombinefcnc_*.Asymptotic.mH120.root',plotsdir+'fcnc2d_obs_vector_dm210_q0p3',(100,.3,2.5),(100,10.,1250.),'g_{q}^{V} = 0.3, g_{DM}^{V} = 1 [FCNC]',True)
+#makePlot2D(plotConfig.scansDir+'vector/gdmv_1p0_gdma_0_gv_0p5_ga_0/higgsCombinefcnc_*.Asymptotic.mH120.root',plotsdir+'fcnc2d_obs_vector_dm210_q0p5',(100,.3,2.5),(100,10.,1250.),'g_{q}^{V} = 0.5, g_{DM}^{V} = 1 [FCNC]',True)
+#makePlot2D(plotConfig.scansDir+'vector/gdmv_1p0_gdma_0_gv_0p75_ga_0/higgsCombinefcnc_*.Asymptotic.mH120.root',plotsdir+'fcnc2d_obs_vector_dm210_q0p75',(100,.3,2.5),(100,10.,1250.),'g_{q}^{V} = 0.75, g_{DM}^{V} = 1 [FCNC]',True)
+#makePlot2D(plotConfig.scansDir+'vector/gdmv_1p0_gdma_0_gv_1_ga_0/higgsCombinefcnc_*.Asymptotic.mH120.root',plotsdir+'fcnc2d_obs_vector_dm210_q1',(100,.3,2.5),(100,10.,1250.),'g_{q}^{V} = 1, g_{DM}^{V} = 1 [FCNC]',True)
 #makePlot2D(plotConfig.scansDir+'fcnc/gdmv_0_gdma_1p0_gv_0_ga_0p25/higgsCombinefcnc_*.Asymptotic.mH120.root',plotsdir+'fcnc2d_obs_axial',(50,200.,2200.),(50,100.,1200.),'g_{q}^{A} = 0.25, g_{DM}^{A} = 1 [FCNC]',True)
 #makePlot2D(plotConfig.scansDir+'fcnc/gdmv_1p0_gdma_1p0_gv_0p25_ga_0p25/higgsCombinefcnc_*.Asymptotic.mH120.root',plotsdir+'fcnc2d_obs_VpA',(50,200.,2200.),(50,100.,1200.),'g_{q}^{A} = g_{q}^{V} = 0.25, g_{DM}^{A} = g_{DM}^{V} = 1 [FCNC]',True)

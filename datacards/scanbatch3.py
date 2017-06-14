@@ -36,8 +36,10 @@ class Model():
 indir = args.indir
 outdir = args.outdir
 models = [Model(*(args.cfg))]
+scaling = None
 
 def makeHists(model,infile):
+    global scaling
     name_ = sub('-','_',sub('\.','p',model.name))
     fout = root.TFile(name_+'_model.root','RECREATE')
     bins = array('f',[250,280,310,350,400,450,600,1000])
@@ -77,6 +79,22 @@ def makeHists(model,infile):
         for syst in ['','_btagUp','_btagDown','_mistagUp','_mistagDown',
                         '_sjbtagUp','_sjbtagDown','_sjmistagUp','_sjmistagDown']:
             hist = folder.Get('h_%s%s'%(tag_name,syst))
+            if scaling:
+                hist.Scale(scaling)
+            elif hist.Integral() > 5000:
+                scaling = 0.01
+                hist.Scale(scaling)
+            elif hist.Integral() > 500:
+                scaling = 0.1
+                hist.Scale(scaling)
+            elif hist.Integral() < 0.001:
+                scaling = 1000
+                hist.Scale(scaling)
+            elif hist.Integral() < 0.01:
+                scaling = 100
+                hist.Scale(scaling)
+            if scaling:
+                print 'SCALING BY',scaling
             dhist = root.RooDataHist('monotop_%ssignal_%s%s'%(tag_label,name_,syst),
                                      '%ssignal %s %s'%(tag_label,name_,syst),
                                      root.RooArgList(vmet),
@@ -93,6 +111,7 @@ def makeHists(model,infile):
 
 
 def run(model,infile,runObserved=True):
+    global scaling
     start = time()
     if model.model=='vector':
         label = 'fcnc_'
@@ -114,6 +133,13 @@ def run(model,infile,runObserved=True):
     print cmd
     system(cmd)
     print 'fitting took %i'%(time()-start); start = time()
+    if scaling:
+        print 'Adding scaling parameter'
+        flimits = root.TFile('higgsCombine%s.Asymptotic.mH120.root'%label,'UPDATE')
+        tscaling = root.TNamed('scaling', '%s'%scaling)
+        print flimits, tscaling
+        flimits.WriteTObject(tscaling,'scaling')
+        flimits.Close()
     # flimit = root.TFile('higgsCombinefcnc_%i_%i.Asymptotic.mH120.root'%(model.mMed,model.mChi))
     # tlimit = flimit.Get('limit')
     # tlimit.GetEntry(2)
@@ -121,7 +147,7 @@ def run(model,infile,runObserved=True):
     # system("combine -M Asymptotic combined_%s.txt -n %s -m %i"%(label,model.mMed*1000+mChi))
 
 for m in models:
-    run(m,indir+'/interpolate/interpolated/interp_%s.root'%(m.mass))
+    run(m,indir+'/interp_%s.root'%(m.mass))
     outdir_ = '%s/%s/%s'%(outdir,m.model,m.coupling)
     system('mkdir -p %s' %outdir_)
     system('mv higgs*root %s'%outdir_)
