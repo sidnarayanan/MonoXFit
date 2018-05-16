@@ -204,7 +204,7 @@ def makePlot2D(filepath,foutname,gqcfg,gdmcfg,header,legend_pos=1):
     else:
       leg = root.TLegend(0.40,0.62,0.81,0.88);#,NULL,"brNDC");
     leg.SetHeader(header)
-    leg.AddEntry(hs['exp'],"Median Expected  95% CL","L");
+    leg.AddEntry(hs['exp'],"Median Expected 95% CL","L");
     leg.AddEntry(hs['expup'],"Exp. #pm 1 std. dev. (exp)","L");
     leg.AddEntry(hs['obsclone'],"Observed 95% CL","L");
     leg.AddEntry(hs['obsup'],"Obs. #pm 1 std. dev. (theory)","L");

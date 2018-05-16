@@ -180,7 +180,7 @@ def cmodel(cid,nam,_f,_fOut, out_ws, diag):
         byb_d.SetBinContent(b,0)
       _fOut.WriteTObject(byb_u)
       _fOut.WriteTObject(byb_d)
-      cr.add_nuisance_shape('%s_stat_error_%s_bin%d'%(cid,crname2,b),_fOut)
+      cr.add_nuisance_shape('%s_stat_error_%s_bin%d'%(cid,crname2,b),_fOut) # HERE
 
   addStatErrs(WScales,CRs[0],'wmn','singlemuonwModel')
   addStatErrs(WScales_e,CRs[1],'wen','singleelectronwModel')

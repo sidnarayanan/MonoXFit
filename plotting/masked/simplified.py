@@ -5,9 +5,10 @@ from tdrStyle import *
 import plotConfig
 from math import sqrt
 setTDRStyle()
+import cPickle as pickle
 
 
-#basedir = getenv('CMSSW_BASE') + '/src/MonoXFit_CSV/'
+#basedir = getenv('CMSSW_BASE') + '/src/MonoXFit_MonoH/'
 basedir = '../../'
 f_mlfit = root.TFile(basedir+'/datacards/mlfit.root','READ')
 f_data = root.TFile(basedir+'/mono-x.root','READ')
@@ -22,9 +23,9 @@ processes = [
       'data',
 ]
 
-def corr(cat):
-  hbkg = f_mlfit.Get('shapes_fit_b/%s_sig/total_background'%cat)
-  hcovar = f_mlfit.Get('shapes_fit_b/%s_sig/total_covar'%cat)
+def corr():
+  hbkg = f_mlfit.Get('shapes_fit_b/sig/total_background')
+  hcovar = f_mlfit.Get('shapes_fit_b/sig/total_covar')
   hcorr = hcovar.Clone('corr')
 
   nbins = hbkg.GetNbinsX()
@@ -63,7 +64,7 @@ def corr(cat):
   latex2.SetTextSize(0.6*c.GetTopMargin())
   latex2.SetTextAlign(31) # align right
   latex2.SetTextSize(0.5*c.GetTopMargin())
-  latex2.DrawLatex(0.94, 0.94,"%.1f fb^{-1} (13 TeV)"%(plotConfig.lumi))
+  latex2.DrawLatex(0.85, 0.94,"%.0f fb^{-1} (13 TeV)"%(plotConfig.lumi))
   #latex2.DrawLatex(0.9, 0.94,"2.32 fb^{-1} (13 TeV)")
   latex2.SetTextSize(0.6*c.GetTopMargin())
   latex2.SetTextFont(62)
@@ -72,32 +73,35 @@ def corr(cat):
   latex2.SetTextSize(0.5*c.GetTopMargin())
   latex2.SetTextFont(52)
   latex2.SetTextAlign(11)
-#  latex2.DrawLatex(0.21, 0.94, "Preliminary")          
+  latex2.DrawLatex(0.21, 0.94, "Preliminary")          
 
   root.gPad.RedrawAxis()
 
   plotDir = plotConfig.plotDir
 
   for ext in ['pdf','png','C']:
-    c.SaveAs(plotDir+"corr_"+cat+"."+ext)
+    c.SaveAs(plotDir+"corr."+ext)
 
 def yields(cat):
   hists = {}
   N = None
-  print cat
   for p in processes:
     hists[p] = f_mlfit.Get('shapes_fit_b/'+cat+'_sig/'+p)
     if not N:
       N = hists[p].GetNbinsX()
+  d = {}
   for ib in xrange(1,N+1):
+    d[ib] = {}
     width = hists['ttbar'].GetBinWidth(ib)
     s = '%20s& '%('$%i$-$%i$'%(int(hists['ttbar'].GetBinLowEdge(ib)), int(width + hists['ttbar'].GetBinLowEdge(ib))))
+    d[ib]['title'] = s 
     total = 0
     total_err = 0
     for p in processes:
       if p == 'data':
         val = hists[p].GetY()[ib-1]
         s += '$%15i$ & '%int(val*width)
+        d[ib][p] = (val*width,0)
       else:
         val = hists[p].GetBinContent(ib) * width
         err = hists[p].GetBinError(ib) * width
@@ -105,14 +109,19 @@ def yields(cat):
           s += '$%7.1f \\pm %5.1f$ & '%(val, err)
         else:
           s += '$%7.2f \\pm %5.2f$ & '%(val, err)
+        d[ib][p] = (val,err)
         total += val
         total_err += pow(err, 2)
     s += '$%7.1f \\pm %5.1f$ \\\\'%(total,sqrt(total_err))
+    d[ib]['total'] = (total,sqrt(total_err))
+
+    with open('all/' + cat+'.pkl','w') as fdump:
+      pickle.dump(d, fdump)
+
     print s
 
 
-corr('loose')
-corr('tight')
+# corr()
 
 yields('loose')
 yields('tight')

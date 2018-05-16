@@ -9,7 +9,7 @@ setTDRStyle()
 #plotextralabel = 'Masked'
 plotextralabel = ''
 
-PRELIM = True
+PRELIM = False 
 
 new_dic = defaultdict(dict)
 
@@ -29,14 +29,14 @@ def plotPreFitPostFit(region,cat='category_monotop',combinecat='',blind=False):
               "signal":"sig", 
               "singleelectrontop":"ten", 
               "singleelectronw":"wen"}
-  extralabels = {"singlemuonw":"Single muon W CR", 
-              "singlemuontop":"Single muon t#bar{t} CR",
+  extralabels = {"singlemuonw":"Single-#mu b-vetoed CR", 
+              "singlemuontop":"Single-#mu b-tagged CR",
               "dielectron":"Dielectron CR",
               "dimuon":"Dimuon CR",
               "photon":"Photon CR", 
               "signal":"Signal region", 
-              "singleelectrontop":"Single electron t#bar{t} CR", 
-              "singleelectronw":"Single electron W CR"}
+              "singleelectrontop":"Single-e b-tagged CR", 
+              "singleelectronw":"Single-e b-vetoed CR"}
 
   extralabel = extralabels[region]
   mainbkg = {"singlemuonw":"wjets", "dimuon":"zll", "photon":"gjets", "signal":None, "singleelectronw":"wjets", "dielectron":"zll", "singlemuontop":"ttbar","singleelectrontop":"ttbar"}
@@ -143,7 +143,7 @@ def plotPreFitPostFit(region,cat='category_monotop',combinecat='',blind=False):
            '#gamma+jets',
            'Data',
       ]
-  zcolor = kAzure+5
+  zcolor = kAzure-9
   colors = {
       'qcd':kGray,
       'dibosons':kViolet-8,    
@@ -225,7 +225,7 @@ def plotPreFitPostFit(region,cat='category_monotop',combinecat='',blind=False):
   dummy.GetXaxis().SetTitle("")
   dummy.GetXaxis().SetTitleSize(0)
   dummy.GetXaxis().SetLabelSize(0)
-  dummy.SetMaximum(50*dummy.GetMaximum())
+  dummy.SetMaximum(100*dummy.GetMaximum())
   dummy.SetMinimum(0.001)
   dummy.GetYaxis().SetTitleOffset(1.15)
   dummy.Draw()
@@ -233,25 +233,16 @@ def plotPreFitPostFit(region,cat='category_monotop',combinecat='',blind=False):
   h_stack_postfit.Draw("hist same")
 
   h_all_prefit.SetLineColor(2)
+  h_all_prefit.SetLineStyle(2)
   h_all_prefit.SetLineWidth(3)
-#  h_all_prefit.Scale(1,"width")
   h_all_prefit.Draw("histsame")
 
   h_all_postfit.SetLineColor(4)
   h_all_postfit.SetLineWidth(3)
   h_all_postfit.Draw("histsame")
 
-  h_all_prefit.SetLineWidth(2)
-  h_all_postfit.SetLineWidth(2)
-  '''
-  h_all_postfit.Scale(1,"width")
-
-
-  h_other_prefit.SetLineColor(1)
-  h_other_prefit.SetFillColor(kGray+1)
-  h_other_prefit.Scale(1,"width")
-  h_other_prefit.Draw("histsame")
-  '''
+  h_all_prefit.SetLineWidth(3)
+  h_all_postfit.SetLineWidth(3)
 
   if not blind:
     h_data.SetMarkerStyle(20)
@@ -259,18 +250,18 @@ def plotPreFitPostFit(region,cat='category_monotop',combinecat='',blind=False):
     h_data.Scale(1,"width")
     h_data.Draw("epsame")
 
-#  if region=='signal':
-#    h_res.Draw('hist same')
-#    h_fcnc.Draw('hist same')
 
-  legend = TLegend(.55,.55,.95,.90)
+  if 'photon' in region:
+    legend = TLegend(.55,.55,.95,.92)
+  else:
+    legend = TLegend(.55,.52,.95,.92)
   #legend.SetTextSize(0.04)
   yields = {}
   if not blind:
     legend.AddEntry(h_data,"Data","elp")
     yields['Data'] = getInt(h_data)
-  legend.AddEntry(h_all_prefit, "SM backgrounds (pre-fit)", "l")
-  legend.AddEntry(h_all_postfit, "SM backgrounds (post-fit)", "l") 
+  legend.AddEntry(h_all_prefit, "SM total (pre-fit)", "l")
+  legend.AddEntry(h_all_postfit, "SM total (post-fit)", "l") 
   for process in reversed(processes):
     try:
       hist = h_postfit[process]
@@ -280,9 +271,6 @@ def plotPreFitPostFit(region,cat='category_monotop',combinecat='',blind=False):
       yields[processNames[process]] = getInt(hist)
     except KeyError:
       pass
-#  if region=='signal':
-#    legend.AddEntry(h_res,'Resonant M_{#phi}=1.1 TeV','l')
-#    legend.AddEntry(h_fcnc,'FCNC M_{V}=0.9 TeV','l')
   legend.SetShadowColor(0);
   legend.SetFillColor(0);
   legend.SetFillStyle(0)
@@ -307,19 +295,19 @@ def plotPreFitPostFit(region,cat='category_monotop',combinecat='',blind=False):
   latex2.SetTextSize(0.5*c.GetTopMargin())
   latex2.SetTextFont(42)
   latex2.SetTextSize(0.6*c.GetTopMargin())
-  latex2.DrawLatex(0.16, 0.85,extralabel)
+  latex2.DrawLatex(0.16, 0.83,extralabel)
   if 'loose' in combinecat:
-    latex2.DrawLatex(0.16,0.8,"0.1<BDT<0.45")
+    latex2.DrawLatex(0.16,0.78,"0.1 < BDT < 0.45")
   elif 'tight' in combinecat:
-    latex2.DrawLatex(0.16,0.8,"BDT>0.45")
+    latex2.DrawLatex(0.16,0.78,"BDT > 0.45")
   latex2.SetTextAlign(31) # align right
   latex2.SetTextSize(0.5*c.GetTopMargin())
-  latex2.DrawLatex(0.94, 0.94,"%.1f fb^{-1} (13 TeV)"%(plotConfig.lumi))
+  latex2.DrawLatex(0.94, 0.94,"%.0f fb^{-1} (13 TeV)"%(plotConfig.lumi))
   #latex2.DrawLatex(0.9, 0.94,"2.32 fb^{-1} (13 TeV)")
   latex2.SetTextSize(0.6*c.GetTopMargin())
   latex2.SetTextFont(62)
   latex2.SetTextAlign(11) # align left
-  latex2.DrawLatex(0.12, 0.94, "CMS")
+  latex2.DrawLatex(0.16, 0.87, "CMS")
   latex2.SetTextSize(0.5*c.GetTopMargin())
   latex2.SetTextFont(52)
   latex2.SetTextAlign(11)
@@ -413,7 +401,8 @@ def plotPreFitPostFit(region,cat='category_monotop',combinecat='',blind=False):
   g_ratio_pre = TGraphAsymmErrors(v_met,v_ratio_pre,v_dmet,v_dmet,v_ratio_pre_lo,v_ratio_pre_hi)
   g_ratio_pre.SetLineColor(2)
   g_ratio_pre.SetMarkerColor(2)
-  g_ratio_pre.SetMarkerStyle(20)
+  g_ratio_pre.SetLineStyle(2)
+  g_ratio_pre.SetMarkerStyle(24)
 
   g_ratio_post = TGraphAsymmErrors(v_met,v_ratio_post,v_dmet,v_dmet,v_ratio_post_lo,v_ratio_post_hi)
   g_ratio_post.SetLineColor(4)
@@ -435,7 +424,10 @@ def plotPreFitPostFit(region,cat='category_monotop',combinecat='',blind=False):
   for i in range(1,dummy2.GetNbinsX()):
     dummy2.SetBinContent(i,1.0)
   dummy2.GetYaxis().SetTitle("Data / Pred.")
-  dummy2.GetXaxis().SetTitle("Recoil [GeV]")
+  if 'signal' in region:
+    dummy2.GetXaxis().SetTitle("p_{T}^{miss} [GeV]")
+  else:
+    dummy2.GetXaxis().SetTitle("p_{T}^{recoil} [GeV]")
   dummy2.SetLineColor(0)
   dummy2.SetMarkerColor(0)
   dummy2.SetLineWidth(0)
@@ -496,6 +488,7 @@ def plotPreFitPostFit(region,cat='category_monotop',combinecat='',blind=False):
   #del h_prefit
 
 
+plotPreFitPostFit("signal",combinecat="tight_",blind=False)
 plotPreFitPostFit("singlemuonw",combinecat="tight_")
 plotPreFitPostFit("singlemuontop",combinecat="tight_")
 plotPreFitPostFit("dimuon",combinecat="tight_")
@@ -503,8 +496,9 @@ plotPreFitPostFit("photon",combinecat="tight_")
 plotPreFitPostFit("singleelectronw",combinecat="tight_")
 plotPreFitPostFit("singleelectrontop",combinecat="tight_")
 plotPreFitPostFit("dielectron",combinecat="tight_")
-plotPreFitPostFit("signal",combinecat="tight_",blind=False)
 
+
+plotPreFitPostFit("signal","category_monotop_loose",combinecat="loose_",blind=False)
 plotPreFitPostFit("singlemuonw","category_monotop_loose",combinecat="loose_")
 plotPreFitPostFit("singlemuontop","category_monotop_loose",combinecat="loose_")
 plotPreFitPostFit("dimuon","category_monotop_loose",combinecat="loose_")
@@ -512,6 +506,5 @@ plotPreFitPostFit("photon","category_monotop_loose",combinecat="loose_")
 plotPreFitPostFit("singleelectronw","category_monotop_loose",combinecat="loose_")
 plotPreFitPostFit("singleelectrontop","category_monotop_loose",combinecat="loose_")
 plotPreFitPostFit("dielectron","category_monotop_loose",combinecat="loose_")
-plotPreFitPostFit("signal","category_monotop_loose",combinecat="loose_",blind=False)
 
 #plotPreFitPostFit("signal") ### fitting to real data now!

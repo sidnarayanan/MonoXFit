@@ -72,7 +72,7 @@ def addTopErrors(TopScales,targetmc,newName,crName,_fOut,CRs,nCR,cid,isW=False):
     byb_d.SetBinContent(b+1,TopScales.GetBinContent(b+1)-err)
     _fOut.WriteTObject(byb_u)
     _fOut.WriteTObject(byb_d)
-    CRs[nCR].add_nuisance_shape("%s_stat_error_%sCR_bin%d"%(cid,crName,b),_fOut)
+    CRs[nCR].add_nuisance_shape("%s_stat_error_%sCR_bin%d"%(cid,crName,b),_fOut) # HERE
 
 
 def cmodel(cid,nam,_f,_fOut, out_ws, diag):

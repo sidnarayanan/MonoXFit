@@ -28,7 +28,7 @@ systematics=["btag","mistag",'sjbtag','sjmistag']
 #  OPTIONAL --> 'extra_cuts': additional cuts maybe specific to this control region (eg ptphoton cuts) if this key is missing, the code will not complain   
  
 #in_file_name = '/data/t3home000/snarayan/store/panda/v_8026_0_5_slim/fitting/fittingForest_stdm.root'
-in_file_name = '/data/t3home000/snarayan/store/panda/v_8026_0_4/fitting/fittingForest.root'
+in_file_name = '/data/t3home000/snarayan/store/panda/v_8026_0_5_slim/fitting/fittingForest_tzq.root'
 #in_file_name = '/data/t3home000/snarayan/store/panda/v_8026_0_3/fitting/fittingForest.root'
 
 monotop_category = {
@@ -58,6 +58,7 @@ monotop_category = {
           ,'1750_1_signal'     :['signal','nonres_1750_1',1,1]
           ,'2250_1_signal'     :['signal','nonres_2250_1',1,1]
           ,'scalar_3100_100_signal'     :['signal','res_3100_100',1,1]
+          ,'tzq_signal'                 :['signal','tzq',1,1]
 
 
           # some signals 
@@ -153,6 +154,7 @@ monotop_loose_category = {
           ,'1750_1_signal'           :['signal','nonres_1750_1',1,1]
           ,'2250_1_signal'           :['signal','nonres_2250_1',1,1]
           ,'scalar_3100_100_signal'     :['signal','res_3100_100',1,1]
+          ,'tzq_signal'                 :['signal','tzq',1,1]
 
           # some signals 
 #          ,"res_mMed1900_signal"           :['signal','Mres1900_Mchi100',1,1]

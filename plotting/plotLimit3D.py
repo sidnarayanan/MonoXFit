@@ -15,7 +15,7 @@ from scipy.interpolate import LinearNDInterpolator as LNDI
 ##Color palette
 #root.gStyle.SetPalette(root.kDarkBodyRadiator)
 #ncontours = 999;
-#root.TColor.InitializeColors();
+root.TColor.InitializeColors();
 ##stops = [ 0.0000, 0.1250, 0.2500, 0.3750, 0.5000, 0.6250, 0.7500, 0.8750, 1.0000]
 #stops = [0.,1.]
 #green = blue = red = [1.,1.]
@@ -30,8 +30,16 @@ from scipy.interpolate import LinearNDInterpolator as LNDI
 #blueArray  = array('d',blue)
 #
 #root.TColor.CreateGradientColorTable(2, array('d',stops), array('d',red), array('d',green), array('d',blue), 999);
+#root.gStyle.SetPalette(root.kBird)
+stops  = array('d', [0.0000,  0.400, 0.50, 0.6000, 0.70, 0.800, 0.90, 1.0000])
+stops  = array('d', [0, 0.25, 0.4, 0.47, 0.54, 0.6, 0.75, 1.0])
+reds   = array('d', [ 102./255., 157./255., 188./255., 196./255., 214./255., 223./255., 235./255., 251./255.])
+greens = array('d', [  29./255.,  25./255.,  37./255.,  67./255.,  91./255., 132./255., 185./255., 251./255.])
+blues  = array('d', [  32./255.,  33./255.,  45./255.,  66./255.,  98./255., 137./255., 187./255., 251./255.])
+for a in [reds, greens, blues]:
+  a.reverse()
+Idx = root.TColor.CreateGradientColorTable(len(stops), stops, reds, greens, blues, 255);
 root.gStyle.SetNumberContours(99);
-root.gStyle.SetPalette(root.kBird)
 
 root.gStyle.SetLabelSize(0.035,"X");
 root.gStyle.SetLabelSize(0.035,"Y");
@@ -178,7 +186,7 @@ def makePlot3D(filepath,foutname,gqcfg,gdmcfg,medcfg):
   tex.SetLineWidth(2);
   tex.SetTextSize(0.040);
   tex.Draw();
-  tex.DrawLatex(0.57,0.94,"35.8 fb^{-1} (13 TeV)");
+  tex.DrawLatex(0.6,0.94,"36 fb^{-1} (13 TeV)");
 
   texCMS = root.TLatex(0.12,0.94,"#bf{CMS}");
   texCMS.SetNDC();
@@ -214,7 +222,7 @@ def makePlot3D(filepath,foutname,gqcfg,gdmcfg,medcfg):
   tex.SetLineWidth(2);
   tex.SetTextSize(0.040);
   tex.Draw();
-  tex.DrawLatex(0.05,0.9,"35.8 fb^{-1} (13 TeV)");
+  tex.DrawLatex(0.05,0.9,"36 fb^{-1} (13 TeV)");
 
   texCMS = root.TLatex(0.05,0.94,"#bf{CMS}");
   texCMS.SetNDC();
